@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.TreeMap;
 
 /**
  * Created by matt on 9/7/15.
@@ -11,24 +10,21 @@ public class ChineseZodiacFinder {
         String[] chineseZodiac = new String[] {"Rat", "Ox", "Tiger", "Rabbit",
                 "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"};
 
-        TreeMap <Integer, String> zodiacSigns = new TreeMap<Integer, String>();
-
+        String[] zodiacSigns = new String[96];
         int c = 0;
-        //This loops through the chineseZodiac array above eight times to populate the zodiacSigns map
+
+        //This loops through the 12 element chineseZodiac array above eight times to populate the zodiacSigns array
         for (int masterCounter = 0; masterCounter < 8; masterCounter++)
         {
             for (int i = 0; i < 12; i++)
             {
-                zodiacSigns.put(c, chineseZodiac[i]);
+                zodiacSigns[c] = chineseZodiac[i];
                 c += 1;
             }
         }
 
-        LocalDate[][] zodiacRange =
-        {
-				/*
-				*This runs through the 12-year cycle eight times
-				*/
+        // This runs through the 12-year Chinese Zodiac cycle eight times
+        LocalDate[][] zodiacRange = {
             {LocalDate.of(1924,2,5), LocalDate.of(1925, 1, 23)},    // Rat
             {LocalDate.of(1925,1,24), LocalDate.of(1926,2,12)},   // Ox
             {LocalDate.of(1926,2,13), LocalDate.of(1927,2,1)},    // Tiger
@@ -134,7 +130,7 @@ public class ChineseZodiacFinder {
             if ((dateOfBirth.equals(zodiacRange[i][0]) || dateOfBirth.isAfter(zodiacRange[i][0]))
                     && ((dateOfBirth.equals(zodiacRange[i][1])) || dateOfBirth.isBefore(zodiacRange[i][1])))
             {
-                yourChineseZodiac = zodiacSigns.get(i);
+                yourChineseZodiac = zodiacSigns[i];
                 break;
             }
         }

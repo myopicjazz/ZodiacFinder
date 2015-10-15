@@ -37,8 +37,6 @@ public class Main {
         javaDev.setwesternZodiac(westernZodiac = BatBelt.WesternZodiac(javaDev.getDateOfBirth()));
         javaDev.setChineseZodiac(chineseZodiac = ChineseZodiacFinder.ChineseZodiac(javaDev.getDateOfBirth()));
 
-
-
         System.out.println ("");
         System.out.println (javaDev.getName() + ", The stars indicate an opening for " + javaDev.getAge() +
                 "-year-old Java developer " + "in " + javaDev.getPlaceToGo() + ". Being a " + javaDev.getwesternZodiac()
