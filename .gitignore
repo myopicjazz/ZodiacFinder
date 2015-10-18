@@ -3,6 +3,8 @@ Thumbs.db
 ehthumbs.db
 .idea
 *.iml
+.gitattributes
+.gitignore
 
 # Folder config file
 Desktop.ini
