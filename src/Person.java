@@ -35,17 +35,17 @@ public class Person {
         return name;
     }
 
-    public void setName(String name) {
+    /*public void setName(String name) {
         this.name = name;
-    }
+    }*/
 
     public String getFavoriteColor() {
         return favoriteColor;
     }
 
-    public void setFavoriteColor(String favoriteColor) {
+    /*public void setFavoriteColor(String favoriteColor) {
         this.favoriteColor = favoriteColor;
-    }
+    }*/
 
     public String getWesternZodiac() {
         return westernZodiac;
@@ -69,14 +69,14 @@ public class Person {
         return age;
     }
 
-    public void setAge(int age) {
+    /*public void setAge(int age) {
         this.age = age;
-    }
+    }*/
 
     public String getPlaceToGo() { return placeToGo; }
 
     public String setPlaceToGo(String favePlace) {
-        String placeToGo = Destination(favePlace);
+        placeToGo = Destination(favePlace);
         return placeToGo;
     }
 
@@ -84,7 +84,7 @@ public class Person {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
+    /*public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
-    }
+    }*/
 }
