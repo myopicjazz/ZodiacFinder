@@ -10,9 +10,6 @@ public class Main {
         String name;
         String birthDate;
         String favoriteColor;
-        String westernZodiac = "";
-        String chineseZodiac = "";
-        String placeToGo;
         LocalDate dateOfBirth;
         Scanner input = new Scanner(System.in);
 
@@ -33,14 +30,14 @@ public class Main {
         favoriteColor = input.next();
 
         Person javaDev = new Person(name, dateOfBirth, age, favoriteColor);
-        javaDev.setPlaceToGo(placeToGo = javaDev.Destination(favoriteColor));
-        javaDev.setwesternZodiac(westernZodiac = BatBelt.WesternZodiac(javaDev.getDateOfBirth()));
-        javaDev.setChineseZodiac(chineseZodiac = ChineseZodiacFinder.ChineseZodiac(javaDev.getDateOfBirth()));
+        javaDev.setPlaceToGo(favoriteColor);
+        javaDev.setWesternZodiac(javaDev.getDateOfBirth());
+        javaDev.setChineseZodiac(javaDev.getDateOfBirth());
 
         System.out.println ("");
         System.out.println (javaDev.getName() + ", The stars indicate an opening for " + javaDev.getAge() +
-                "-year-old Java developer " + "in " + javaDev.getPlaceToGo() + ". Being a " + javaDev.getwesternZodiac()
+                "-year-old Java developer " + "in " + javaDev.getPlaceToGo() + ". Being a " + javaDev.getWesternZodiac()
                 + " and choosing " + javaDev.getFavoriteColor() + " is a sign of " + "future success as is being born in" +
-                " the year of " + javaDev.getChineseZodiac() + ".  You should move immediately.");
+                " the year of the " + javaDev.getChineseZodiac() + ".  You should move immediately.");
     }
 }

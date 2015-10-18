@@ -20,7 +20,7 @@ public class Person {
         this.favoriteColor = favoriteColor;
     }
 
-    public String Destination (String myFavoriteColor)
+    private String Destination (String myFavoriteColor)
     {
         if (myFavoriteColor.toLowerCase().trim().equals("blue")) {
             placeToGo = "Toadsuck";
@@ -47,20 +47,22 @@ public class Person {
         this.favoriteColor = favoriteColor;
     }
 
-    public String getwesternZodiac() {
+    public String getWesternZodiac() {
         return westernZodiac;
     }
 
-    public void setwesternZodiac(String westernZodiac) {
-        this.westernZodiac = westernZodiac;
+    public String setWesternZodiac (LocalDate dob){
+        westernZodiac = BatBelt.WesternZodiac(dob);
+        return westernZodiac;
     }
 
     public String getChineseZodiac() {
         return chineseZodiac;
     }
 
-    public void setChineseZodiac(String chineseZodiac) {
-        this.chineseZodiac = chineseZodiac;
+    public String setChineseZodiac(LocalDate dob){
+        chineseZodiac = ChineseZodiacFinder.ChineseZodiac(dob);
+        return chineseZodiac;
     }
 
     public int getAge() {
@@ -71,12 +73,11 @@ public class Person {
         this.age = age;
     }
 
-    public String getPlaceToGo() {
-        return placeToGo;
-    }
+    public String getPlaceToGo() { return placeToGo; }
 
-    public void setPlaceToGo(String placeToGo) {
-        this.placeToGo = placeToGo;
+    public String setPlaceToGo(String favePlace) {
+        String placeToGo = Destination(favePlace);
+        return placeToGo;
     }
 
     public LocalDate getDateOfBirth() {
