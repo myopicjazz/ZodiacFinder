@@ -10,9 +10,12 @@ public class Main {
         String name;
         String birthDate;
         String favoriteColor;
+<<<<<<< HEAD
         String westernZodiac = "";
         String chineseZodiac = "";
         String placeToGo;
+=======
+>>>>>>> 90efb7b8cf24d2d24172fc8d0febae75cfd97f8d
         LocalDate dateOfBirth;
         Scanner input = new Scanner(System.in);
 
@@ -33,6 +36,7 @@ public class Main {
         favoriteColor = input.next();
 
         Person javaDev = new Person(name, dateOfBirth, age, favoriteColor);
+<<<<<<< HEAD
         javaDev.setPlaceToGo(placeToGo = javaDev.Destination(favoriteColor));
         javaDev.setwesternZodiac(westernZodiac = BatBelt.WesternZodiac(javaDev.getDateOfBirth()));
         javaDev.setChineseZodiac(chineseZodiac = ChineseZodiacFinder.ChineseZodiac(javaDev.getDateOfBirth()));
@@ -42,5 +46,16 @@ public class Main {
                 "-year-old Java developer " + "in " + javaDev.getPlaceToGo() + ". Being a " + javaDev.getwesternZodiac()
                 + " and choosing " + javaDev.getFavoriteColor() + " is a sign of " + "future success as is being born in" +
                 " the year of " + javaDev.getChineseZodiac() + ".  You should move immediately.");
+=======
+        javaDev.setPlaceToGo(favoriteColor);
+        javaDev.setWesternZodiac(javaDev.getDateOfBirth());
+        javaDev.setChineseZodiac(javaDev.getDateOfBirth());
+
+        System.out.println ("");
+        System.out.println (javaDev.getName() + ", The stars indicate an opening for " + javaDev.getAge() +
+                "-year-old Java developer " + "in " + javaDev.getPlaceToGo() + ". Being a " + javaDev.getWesternZodiac()
+                + " and choosing " + javaDev.getFavoriteColor() + " is a sign of " + "future success as is being born in" +
+                " the year of the " + javaDev.getChineseZodiac() + ".  You should move immediately.");
+>>>>>>> 90efb7b8cf24d2d24172fc8d0febae75cfd97f8d
     }
 }

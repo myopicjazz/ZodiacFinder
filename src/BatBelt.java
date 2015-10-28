@@ -7,7 +7,11 @@ import java.time.format.DateTimeParseException;
  * Created by matt on 9/7/15.
  */
 public class BatBelt {
+<<<<<<< HEAD
     public static LocalDate BirthDateConverter(String birthdate)
+=======
+    private static LocalDate BirthDateConverter(String birthdate)
+>>>>>>> 90efb7b8cf24d2d24172fc8d0febae75cfd97f8d
     {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         LocalDate dateOfBirth = LocalDate.now();
